@@ -24,7 +24,7 @@ var TRANSITIONS = [
 ];
 
 var graphType = 0;          // 0 = line graph, 1 = pie chart, 2 = none
-var showRadius = false;     // whether to display infection radius
+var showRadius = true;     // whether to display infection radius
 
 
 

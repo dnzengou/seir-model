@@ -14,7 +14,7 @@ var maxHist;
 var count;
 
 var I_CHANCE = 0.1;         // chance for an entity to become infected
-var I_RADIUS = 24;          // radius within which entities can be infected
+var I_RADIUS = 20;          // radius within which entities can be infected
 var TRANSITIONS = [
     1,                      // exposed      -> infected
     0.005,                  // infected     -> recovered
@@ -42,24 +42,6 @@ function exportScenario() {
     }));
 }
 
-// Import scenario from a scenario string
-function importScenario(str) {
-    try {
-        let custom = JSON.parse(LZString.decompressFromBase64(str));
-        document.getElementById('e_r').value = custom.e_radius;
-        document.getElementById('i_r').value = custom.i_radius;
-        document.getElementById('ds').value = custom.i_chance;
-        document.getElementById('de').value = custom.transitions[0];
-        document.getElementById('di').value = custom.transitions[1];
-        document.getElementById('dr').value = custom.transitions[2];
-        document.getElementById('s0').value = custom.population[0];
-        document.getElementById('e0').value = custom.population[1];
-        document.getElementById('i0').value = custom.population[2];
-        document.getElementById('r0').value = custom.population[3];
-        reset();
-    } catch (err) {}
-}
-
 // Draws a line graph of all entities
 function lineGraph() {
     // Transparent rect behind graph
@@ -84,28 +66,6 @@ function lineGraph() {
     // Draw line at current draw location
     stroke(204);
     line(hist.length, 25, hist.length, 175);
-}
-
-// Draws a pie chart of all entities
-function pieChart() {
-    let results = countStates();
-    let states = results[0];
-    let total = results[1];
-
-    // Draw pie chart
-    let radius = 75;
-    let lastAngle = 0;
-    for (let i = 0; i < states.length; i++) {
-        let angle = states[i] / total * TWO_PI;
-        if (angle === 0) continue;
-
-        // Arc
-        fill(COLORS[i].concat(191));
-        noStroke();
-        ellipseMode(RADIUS);
-        arc(100, 100, radius, radius, lastAngle, lastAngle + angle);
-        lastAngle += angle;
-    }
 }
 
 // Fills map randomly with entities of each state
@@ -202,22 +162,9 @@ function keyPressed() {
             // Spacebar
             showRadius = !showRadius;
             break;
-        case 71:
-            // G
-            graphType++;
-            if (graphType > 2) graphType = 0;
-            break;
-        case 77:
-            // M
-            importScenario(prompt('Input scenario string:'));
-            break;
         case 82:
             // R
             reset();
-            break;
-        case 88:
-            // X
-            copyToClipboard(exportScenario());
             break;
     }
 }

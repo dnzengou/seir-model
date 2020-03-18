@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="author" content="me">
-    <title>disease</title>
+    <title>SEIR 4COVID19</title>
     <link href="style.css" rel="stylesheet">
-    <script src="scripts/lib/p5.min.js" defer></script>
-    <script src="scripts/entity.js" defer></script>
-    <script src="scripts/sketch.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
   </head>
-  <body  style="background-color:#fafad2;>
+  <body>
     <main id="sketch"></main>
-    <aside>
-      <h1>SEIR 4COVID19</h1>
+    <div class="sidenav">
+      <h1>SEIR4COVID19</h1>
 
       <h3>Entity Radius</h3>
-      <p>Radius: <input type="number" id="e_r" value="8" min="0"></p>
-      <p>Infect: <input type="number" id="i_r" value="30" min="0"></p>
+      <p>Radius: <input type="number" id="e_r" value="6" min="0"></p>
+      <p>Infect: <input type="number" id="i_r" value="18" min="0"></p>
 
       <h3>Population</h3>
-      <p>S<sub>0</sub>: <input type="number" id="s0" value="199" min="0"></p>
+      <p>S<sub>0</sub>: <input type="number" id="s0" value="99" min="0"></p>
       <p>E<sub>0</sub>: <input type="number" id="e0" value="0" min="0"></p>
-      <p>I<sub>0</sub>: <input type="number" id="i0" value="1" min="0"></p>
+      <!-- In herd immunity strategy, 60% of infection rate -->
+      <p>I<sub>0</sub>: <input type="number" id="i0" value="60" min="0"></p>
       <p>R<sub>0</sub>: <input type="number" id="r0" value="0" min="0"></p>
 
       <h3>Transitions</h3>
@@ -30,13 +32,28 @@
       <p>I&rarr;R: <input type="number" id="di" value="0.005" min="0" max="1" step="0.001"></p>
       <p>R&rarr;S: <input type="number" id="dr" value="0" min="0" max="1" step="0.001"></p>
 
-      <p>
-        <button onclick="reset()">Reset</button>
-      </p>
+      <button onclick="reset()" class="button1">Reset</button>
+      <button onclick="showRadius=!showRadius" class="button1">Radius</button>
+      
+    </div>
 
-      <p>
-        <button onclick="showRadius=!showRadius">Radius</button>
-      </p>
-    </aside>
+    <!-- Footer -->
+    <footer id="header">
+      <li>
+                <p>&copy; 2020 <a href="http://desireyavro.com"> desireyavro.com </a> <i class="fa fa-coffee" style="color:brown"></i> <i class="fa fa-heart" style="color:pink"></i>
+                </p>
+            </li>
+      </li>
+    
+    <!-- end Footer -->
+
+    <!-- scripts -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script src="scripts/lib/p5.min.js" defer></script>
+    <script src="scripts/utils.js" defer></script>
+    <script src="scripts/entity.js" defer></script>
+    <script src="scripts/sketch.js" defer></script>
   </body>
 </html>

@@ -4,7 +4,7 @@ const COLORS = [
     [213, 0, 0],            // infected
     [85, 139, 47],          // recovered
 ];
-var E_RADIUS = 8;           // particle radius
+var E_RADIUS = 6;           // particle radius
 
 var entities;
 var population;
@@ -13,8 +13,10 @@ var hist;
 var maxHist;
 var count;
 
-var I_CHANCE = 0.1;         // chance for an entity to become infected
-var I_RADIUS = 20;          // radius within which entities can be infected
+var I_CHANCE = 1;           // chance for an entity to become infected
+                            // 100% (naive population)
+var I_RADIUS = 18;          // radius within which entities can be infected
+                            // (about 3 people per radius unit)
 var TRANSITIONS = [
     1,                      // exposed      -> infected
     0.005,                  // infected     -> recovered
@@ -31,23 +33,13 @@ var showRadius = false;     // whether to display infection radius
  * Other functions
  */
 
-// Return scenario string
-function exportScenario() {
-    return LZString.compressToBase64(JSON.stringify({
-        e_radius: E_RADIUS,
-        i_radius: I_RADIUS,
-        i_chance: I_CHANCE,
-        transitions: TRANSITIONS,
-        population: population
-    }));
-}
-
 // Draws a line graph of all entities
 function lineGraph() {
     // Transparent rect behind graph
-    fill(0, 127);
-    noStroke();
-    rect(0, 25, hist.length, 150);
+    stroke(0);                      // Setting the outline (stroke) to black
+    fill(0,250,0,63);               // Setting the interior of a shape (fill) to grey
+    //fill(250);
+    rect(0, 25, hist.length, 150);  // Drawing the rectangle
 
     // Plot history of each state
     noFill();
@@ -68,7 +60,30 @@ function lineGraph() {
     line(hist.length, 25, hist.length, 175);
 }
 
-// Fills map randomly with entities of each state
+
+// Draws a pie chart of all entities
+function pieChart() {
+    let results = countStates();
+    let states = results[0];
+    let total = results[1];
+
+    // Draw pie chart
+    let radius = 75;
+    let lastAngle = 0;
+    for (let i = 0; i < states.length; i++) {
+        let angle = states[i] / total * TWO_PI;
+        if (angle === 0) continue;
+
+        // Arc
+        fill(COLORS[i].concat(191));
+        noStroke();
+        ellipseMode(RADIUS);
+        arc(100, 100, radius, radius, lastAngle, lastAngle + angle);
+        lastAngle += angle;
+    }
+}
+
+// Fills map randomly with entities of each state (random walk)
 // Requires an array of SEIR
 function randomEntities(states) {
     entities = [];
@@ -133,7 +148,8 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    //background(0);
+    background(255); // Setting the background to white
 
     hist.push(countStates()[0]);
     if (hist.length > maxHist) hist.shift();
@@ -161,6 +177,11 @@ function keyPressed() {
         case 32:
             // Spacebar
             showRadius = !showRadius;
+            break;
+        case 71:
+            // G
+            graphType++;
+            if (graphType > 2) graphType = 0;
             break;
         case 82:
             // R

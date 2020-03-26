@@ -32,7 +32,7 @@ es['input'].onkeyup = function() {
 
       if(content && content.hits.length) {
         var list = content.hits.map(function(e,i,a) {
-           return "<li>" + e._highlightResult.name.value + '</i>' + '</li>';
+           return "<li>" + e._highlightResult.x.value + '</i>' + '</li>';
         }).join('');
         es['output'].innerHTML = "<h5><b>Completed in " + content.processingTimeMS + "ms</b></h5><ul>" + list + '</ul>';
       } else {

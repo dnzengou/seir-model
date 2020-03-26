@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="author" content="me">
     <title>SEIR 4COVID19</title>
-  <meta charset="utf-8">
-    <link rel="stylesheet" media="screen" href="assets/css/style.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" href="assets/css/tweetsearch.css">
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
@@ -19,34 +19,59 @@
 </head>
 <body>
 
+    <header>
+      <h1></h1>
+    </header>
+
+    
+
 <div class="jumbotron">
   <div class="container text-center">
+        <div class="row">
+            <div class="col-xs-12 main-container">
 
-    <h1>Hej.</h1>
-    <h2>Here you can check
-      <!--<a href="" class="typewrite" data-period="2000" data-type='[ "see", "play with", "search for" ]'></a>-->
-    </h2>
+                <div id="container">
 
-    <br></br>
+                    <!--<h1 style="text-align:center; background-color:#e5e5e5">Smart Media Search</h1>-->
 
-    <div class="typewriter">
-      <h1><a href="simu.html">Simulation</a>.<a href="tweetsearch.html">Tweets search</a>. Pandemic response checklist.</h1>
-    </div>
+					<br>
 
+                    <div class="container text-center">
+                        <input type="text" autofocus="true" title="Search through tweets about covd19 a.k.a coronavirus." placeholder="Explore..."/ style="font-size:24px;color:cornflowerblue" id="input" />
+                        <div id="output"></div>
+                    </div>
+                    <!-- info -->
+
+<br>
+
+<!--<div class="responsive">
+<div style='max-width: 640px'><div style='position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;'>
+          <iframe id="youTubePlayer" class="youtube-player" type="text/html" width="640" height="385" frameborder="0"></iframe>
+</div></div>
+</div>-->
+
+
+                </div>
+
+            </div>
+        </div>
   </div>
+</div>
 
-  <br></br>
+      <button  class="button1"><a href="index.html">Back</a></button>
 
-  
-  <!--<div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 110px; right: 24px;">
-    <a class="btn-floating btn-large purple">
-      <i class="material-icons">menu</i>
-    </a>
-  </div>-->
+<!--<footer id="footer">
+
+  <ul class="text-center">
+
+      <p><a href="#">DiscoveringRW</a> &copy; 2018 - made by <a href="desireyavro.com">desireyavro</a> with <i class="fa fa-coffee" style="color:brown"></i> & <i class="fa fa-heart" style="color:pink"></i>
+  </ul>
+
+</footer>-->
 
 <footer id="footer">
   <ul class="text-center">
- <p>&copy; 2020 - SEIR 4COVID19</a><img src="assets/img/favicon/favicon-16x16.png"></p>
+ <p>&copy; 2020 - SEIR 4COVID19</a><img src="assets/img/favicon/favicon-16x16.png"> - Tweet search made with algolia</p>
  <!--<p>SEIR 4COVID19 <img src="assets/img/favicon/favicon-16x16.png"></p>-->
   <code style="color:#ccc"><strong>Disclaimer</strong>: These tools are for basic research and educational purposes, and are intended to be used for support only and not for decision-making.
     There are still many uncertainties around COVID-19 modeling, infection and transmission. Therefore many limitations remain on the use and interpretation of this simple model.
@@ -54,14 +79,14 @@
   </ul>
 </footer>
 
-</div>
-
   <!-- scripts -->
   <!--<script src="assets/scripts/typewrite.js"></script>-->
   
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="assets/scripts/app.js"></script>
 
 </body>
 </html>

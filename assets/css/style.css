@@ -29,6 +29,47 @@ main {
     margin: 0 auto;
     /* creates 20% margins on either side */
     }
+
+/* Tablet Landscape */
+
+@media screen and (max-width: 1060px) {
+
+    #primary { width:67%; }
+
+    #secondary { width:30%; margin-left:3%;}  
+
+}
+
+/* Tabled Portrait */
+
+@media screen and (max-width: 768px) {
+
+    #primary { width:100%; }
+
+    #secondary { width:100%; margin:0; border:none; }
+
+}
+
+@media (min-device-width:600px) {
+
+    img[data-src-600px] {
+
+        content: attr(data-src-600px, url);
+
+    }
+
+}
+
+@media (min-device-width:800px) {
+
+    img[data-src-800px] {
+
+        content: attr(data-src-800px, url);
+
+    }
+
+}
+
 .full-width {
     /* 1/3 of 60% = the 20% margin on either side */
     margin-left: -33.33%;
@@ -51,16 +92,13 @@ main {
 }
 
   #sketch {
-      position:absolute;
+      position:fixed;
+      padding: 20px 20px;
       top:0;
       bottom:0;
+      right: 10px;
       width:100%;
       }
-
-
-/*
- * Page content
- */
 
 canvas {
     display: inline-block;

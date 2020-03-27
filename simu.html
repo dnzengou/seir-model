@@ -22,8 +22,8 @@
   </head>
   <body>
     <main id="sketch"></main>
-    <div class="sidenav">
-      <h1>SEIR4COVID19</h1>
+    <div class="sidenav" id ="secondary">
+      <h1><a href="index.html" title="click here to go back to homepage">SEIR4COVID19</a></h1>
 
       <h3>Entity Radius</h3>
       <p>Radius: <input type="number" id="e_r" value="6" min="0"></p>
@@ -43,14 +43,14 @@
       <p>R&rarr;S: <input type="number" id="dr" value="0" min="0" max="1" step="0.001"></p>
 
       <button onclick="reset()" class="button1">Reset</button>
-      <button  class="button1"><a href="index.html">Back</a></button>
+      <!--<button class="button1"><a href="index.html">Back</a></button>-->
 
     <!-- Footer -->
     <footer class="container-fluid text-center">
       <p style="color:blue;"><strong>Info & user instructions</strong>:</p>
       <code style="color:blue">The SEIR model is a compartmental model in which the possible epidemic states of the individuals (agents) are susceptible (S - blue), exposed (E - green), infected (I - red), recovered or removed (R - yellow, sometimes also called resistant). Each of these states correspond to the number of people in each group.<br>
       The graphs here show the state transitions for the expected numbers of agents moving over time from S to E, I and R, then eventually back to S (if interventions though not considered here), also illustrating those dying over time. A more detailed description of the model can be found in recent scholar litterature,
-      <a href="https://scholar.google.fr/scholar?hl=sv&as_sdt=0%2C5&q=SEIR&btnG=">SEIR </a> and <a href="https://scholar.google.fr/scholar?hl=sv&as_sdt=0%2C5&q=covid-19&btnG=">COVID-19 </a> models description. For questions, reach out <a href="mailto:gusnzeeu@student.gu.se">here</a>.
+      <a href="https://scholar.google.fr/scholar?hl=sv&as_sdt=0%2C5&q=SEIR&btnG=">SEIR </a> and <a href="https://scholar.google.fr/scholar?hl=sv&as_sdt=0%2C5&q=covid-19&btnG=">COVID-19 </a> models description. For questions, reach out <a href="mailto:gusnzeeu@student.gu.se">here</a>. To go back to homepage, click on the title 'SEIR4COVID19'.
       </code>
      </footer>
     

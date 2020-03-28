@@ -7,11 +7,19 @@
     <meta name="author" content="me">
     <title>SEIR 4COVID19</title>
     <meta charset=utf-8>
-    <script type="text/javascript" src="d3.v3.js"></script>
+    <script type="text/javascript" src="assets/scripts/d3.v3.js"></script>
 
     <link rel="stylesheet" href="assets/css/repo.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
     <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 <body>
@@ -84,7 +92,7 @@
     var numInView = numInOneScreen;
 
     // d3.csv('https://docs.google.com/spreadsheet/pub?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE&single=true&gid=0&output=csv', function(error, _json){
-    d3.csv('d3_gallery.csv', function(error, _json){
+    d3.csv('assets/d3_gallery.csv', function(error, _json){
 //    d3.csv('d3gallery_feb282013.csv', function(error, _json){
         json = _json;
         d3.select('.example-count').text('(' + json.length + 'examples!)');

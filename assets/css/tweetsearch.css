@@ -26,6 +26,16 @@ body {
     text-align: left;
 }
 
+@media (min-width: 450px) and (max-width: 767px) {
+    .media-list {
+        text-align: left;
+    }
+    .media .thumbnail {
+        float: left;
+        margin-right: 25px;
+    }
+}
+
 .media:first-child {
     margin-top: 15px;
 }
@@ -153,13 +163,13 @@ ul {
 list-style-type: none;
 border-bottom-width: 0px;
 padding:0px;
-color: cornflowerblue;
+color: darkblue;
 }
 li {
 padding: 10px;
 transition: all 5s;
 transition-timing-function: ease-in-out;
-color: cornflowerblue;
+color: darkblue;
 }
 li:hover {
 /*background-color: Tomato;*/

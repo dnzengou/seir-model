@@ -26,19 +26,20 @@ body {
     text-align: left;
 }
 
-@media (min-width: 450px) and (max-width: 767px) {
-    .media-list {
-        text-align: left;
-    }
-    .media .thumbnail {
-        float: left;
-        margin-right: 25px;
-    }
-}
-
 .media:first-child {
     margin-top: 15px;
 }
+
+
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
 
 .btn-outline {
     color: #818791;

@@ -163,7 +163,7 @@ ul {
 list-style-type: none;
 border-bottom-width: 0px;
 padding:0px;
-color: darkblue;
+color: darkgrey;
 }
 li {
 padding: 10px;
@@ -207,6 +207,7 @@ footer {
 
 .SearchBar {
      position: relative;
+     top: 100%;
      left: 10%;
 }
 

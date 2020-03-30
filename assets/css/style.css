@@ -137,6 +137,13 @@ p {
     color: darkblue;
 }
 
+ul {
+list-style-type: none;
+border-bottom-width: 0px;
+padding:0px;
+color: darkgrey;
+}
+
 .button {
   background-color: transparent;
   border: none;

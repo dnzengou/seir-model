@@ -140,15 +140,15 @@ $palered: #FFE8E3;
 width: 100%;
 border: 0px;
 color: blue
-border-bottom: solid black 5px;
-height:100px;
+border-bottom: solid black 2px;
+height:100%;
 font-size:70px;
 transition: all 0.2s;
 transition-timing-function: ease-in-out;
 }
 #input:focus {
 border-bottom-color: $red;
-border-width: 10px;
+border-width: 5px;
 outline: none;
 }
 #input:hover {
@@ -200,5 +200,17 @@ footer {
 }
 
 .button1 {
-    background-color: transparent; color: darkblue;
-  }
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.SearchBar {
+     position: relative;
+     left: 10%;
+}
+
+.SearchBar input {
+     height: 100%;
+     width: 60%;
+}

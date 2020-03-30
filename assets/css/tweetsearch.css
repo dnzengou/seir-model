@@ -3,7 +3,7 @@ body {
     padding: 50px;
     line-height: 150%;
     background-color: #fff;
-      /*background: url('rwanda-landscape_2.jpg') no-repeat center center fixed;*/
+    background: url('assets/img/pandemic-icon.png') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -189,14 +189,15 @@ footer {
 
 
 .button {
-  background-color: transparent;
+  background-color: #4CAF50; /* Green */
   border: none;
-  color: darkblue;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  cursor: pointer;
+  margin: 4px 2px;
 }
 
 .button1 {

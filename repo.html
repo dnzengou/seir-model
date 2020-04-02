@@ -72,7 +72,7 @@
         href: function(d, i){return d.url;},
         html: function(d, i){
             var content = d.title;
-            if(d.author) content += ' '+'<span class="author">'+d.author+'</span>';
+            if(d.country) content += ' '+'<span class="country">'+d.country+'</span>';
             if(d.thumbnail) content += "<br /> <img src='"+d.thumbnail+"' class='thumbnail'/><br />";
             return content;}
     };
@@ -92,7 +92,7 @@
     var numInView = numInOneScreen;
 
     // d3.csv('https://docs.google.com/spreadsheet/pub?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE&single=true&gid=0&output=csv', function(error, _json){
-    d3.csv('assets/d3_gallery.csv', function(error, _json){
+    d3.csv('assets/data/covid19_gallery.csv', function(error, _json){
 //    d3.csv('d3gallery_feb282013.csv', function(error, _json){
         json = _json;
         d3.select('.example-count').text('(' + json.length + 'examples!)');
@@ -104,7 +104,7 @@
 
     function dataTransformMenu1(){
         //TODO: change in spreadsheet
-        var dimensionsMap = {author: 'Author', visualizationType: 'Chart type', title: 'Title'};
+        var dimensionsMap = {country: 'Country', visualizationType: 'Chart type', title: 'Title'};
         return d3.keys(dimensionsMap).map(function(d, i){return {dimension: d, displayName: dimensionsMap[d]};});
     }
 

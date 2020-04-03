@@ -9,5 +9,5 @@
  3. Searchable repository with filters for items' titles, categories, location.<br>
  4. Searchable Table for latest data on pandemic spreading (04032020), source: ECDC
 
- [![Pandemic icon](assets/img/pandemic-icon.png??raw=true "img demo")
+ ![Pandemic icon](assets/img/pandemic-icon.png??raw=true "img demo")
 

@@ -23,16 +23,16 @@
 
 </head>
 <body>
-<div class="info">COVID19 repo <span class="example-count"></span> | <a href="./index.html">Home</a> | 
-<a href="simu.html">Simulation</a></div> | <a class="about-link">About</a></div>
+<div class="info">COVID19 repo <span class="example-count"></span> | <a href="./index.html">Home</a> |
+<a class="about-link">About</a></div>
 <div class="about-box">
 
     <div class="about-close" style="cursor: pointer;">x</div>
 
     <div class="about-content">
-        You can contribute to this gallery on this <a href="#">spreadsheet</a> or improving it on <a href="https://github.com/dnzengou/seir-model">GitHub</a>. <br>
+        You can contribute to this gallery on this <a href="https://docs.google.com/spreadsheets/d/1BGAI925_G7esvywf_jqZqxXmNI--NFt9P9ZGAUXmb8U/">spreadsheet</a> or improving it on <a href="https://github.com/dnzengou/seir-model">GitHub</a>. <br>
         Every entry in this gallery is copyrighted by its author. Feel free to <a href="https://github.com/dnzengou/seir-model/issues">file a request</a> for correcting errors.<br>
-        This repository is inspired by the gallery developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the community.
+        Note. This repository is inspired by the gallery developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the github community.
     </div>
 
 </div>
@@ -95,7 +95,7 @@
     d3.csv('assets/data/covid19_gallery.csv', function(error, _json){
 //    d3.csv('d3gallery_feb282013.csv', function(error, _json){
         json = _json;
-        d3.select('.example-count').text('(' + json.length + 'examples!)');
+        d3.select('.example-count').text('(' + json.length + 'items!)');
         buildList(dataTransformMenu1(), '.menu1-container', data1);
         buildList(dataTransformMenu2('visualizationType'), '.menu2-container', data2);
 //        buildList(dataView(dataTransformMenu3('title', 'all'), numInView), '.menu3-container', data3);

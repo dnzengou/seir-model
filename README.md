@@ -1,12 +1,13 @@
-# SEIR 4COVID19 ABM
-## (work in progress)
-Simple agent-based like-model based on SEIR disease spread (simulated in js and inspired by great work from [xithiox](https://github.com/xithiox/disease) and [processing-js team](https://github.com/processing-js/processing-js.github.io). <br>
-
-See visualisation online [here](https://dnzengou-seir-model.glitch.me/).
-
-### Controls
+# SEIR 4COVID19 web experiment  
+## (work in ongoing progress)
+ 1. Simple agent-based like-model (ABM) based on SEIR disease spread (simulated in js and inspired by great work from [xithiox](https://github.com/xithiox/disease) and [processing-js team](https://github.com/processing-js/processing-js.github.io). <br>
+ 1.1. ### Controls
 * Spacebar to toggle showing infection radius
 * R to reset the simulation
 
-### To Do
-Basic (clickable) booklet with tasks checklist for pandemic preparedness and response plan
+ 2. Tweets search from dataset last collected on April 04022020.</br>
+ 3. Searchable repository with filters for items' titles, categories, location.<br>
+ 4. Searchable Table for latest data on pandemic spreading (04032020), source: ECDC
+
+# Pandemic icon[![Pandemic icon] <img src="assets/img/pandemic-icon.png">
+

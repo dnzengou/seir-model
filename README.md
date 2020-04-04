@@ -1,7 +1,7 @@
 # # :mag: SEIR 4COVID19 web experiment  
 ## (work in ongoing progress)
  1. Simple agent-based like-model (ABM) based on SEIR disease spread (simulated in js and inspired by great work from [xithiox](https://github.com/xithiox/disease) and [processing-js team](https://github.com/processing-js/processing-js.github.io). <br>
- 1.1. ### Controls
+ 1.1. Controls
 * Spacebar to toggle showing infection radius
 * R to reset the simulation
 

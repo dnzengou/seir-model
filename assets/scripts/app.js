@@ -17,8 +17,7 @@ input.onblur = function() {
 }
 
 // Algolia login
-//var client = algoliasearch("KC17SSROI6", "6fabfd6313a9783bf11ce9005ceadfc3");
-var client = algoliasearch("N637HXAMBS", "e0f889ef9198d699ed7577646820ea12");
+var client = algoliasearch("#", "#");
 var index = client.initIndex('covid19-tweets01042020');
 
 // Search
